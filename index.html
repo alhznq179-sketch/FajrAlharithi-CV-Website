@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fajr Fahad Alharithi | CV</title>
+
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#fdf4f5;
+      padding:40px;
+      color:#4b2e39;
+    }
+
+    .cv-container{
+
+      max-width:1200px;
+      margin:auto;
+
+      background:white;
+
+      border-radius:30px;
+
+      overflow:hidden;
+
+      display:grid;
+
+      grid-template-columns:340px 1fr;
+
+      box-shadow:0 15px 50px rgba(0,0,0,0.08);
+    }
+
+    /* LEFT SIDE */
+
+    .left-side{
+
+      background:linear-gradient(
+        180deg,
+        #4b2e39,
+        #7a4e5d,
+        #d4a373
+      );
+
+      color:white;
+
+      padding:50px 35px;
+    }
+
+    .profile{
+
+      text-align:center;
+
+      margin-bottom:45px;
+    }
+
+    .profile-image{
+
+      width:140px;
+      height:140px;
+
+      border-radius:50%;
+
+      background:linear-gradient(
+        135deg,
+        #f6d7c3,
+        #d4a373
+      );
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      margin:auto;
+      margin-bottom:25px;
+
+      font-size:48px;
+      font-weight:700;
+
+      color:#4b2e39;
+
+      border:5px solid rgba(255,255,255,0.15);
+    }
+
+    .profile h1{
+
+      font-size:30px;
+      line-height:1.4;
+      margin-bottom:10px;
+    }
+
+    .profile p{
+
+      color:#fce7e9;
+      font-size:15px;
+    }
+
+    .left-title{
+
+      font-size:22px;
+      margin-bottom:20px;
+
+      position:relative;
+
+      padding-left:15px;
+    }
+
+    .left-title::before{
+
+      content:"";
+
+      position:absolute;
+
+      left:0;
+      top:0;
+
+      width:5px;
+      height:100%;
+
+      background:#f6d7c3;
+
+      border-radius:10px;
+    }
+
+    .contact-box,
+    .language-box{
+
+      margin-bottom:40px;
+    }
+
+    .contact-item{
+
+      margin-bottom:18px;
+    }
+
+    .contact-item span{
+
+      display:block;
+
+      color:#ffe7d2;
+
+      font-size:14px;
+
+      margin-bottom:4px;
+    }
+
+    .contact-item p,
+    .contact-item a{
+
+      color:white;
+
+      text-decoration:none;
+
+      font-size:15px;
+
+      word-break:break-word;
+    }
+
+    .language-box ul{
+
+      padding-left:20px;
+
+      line-height:2;
+    }
+
+    /* RIGHT SIDE */
+
+    .right-side{
+
+      padding:50px;
+    }
+
+    .hero{
+
+      margin-bottom:45px;
+    }
+
+    .hero h2{
+
+      font-size:52px;
+
+      color:#4b2e39;
+
+      margin-bottom:10px;
+    }
+
+    .typing{
+
+      color:#b07d52;
+
+      font-size:24px;
+
+      font-weight:600;
+
+      margin-bottom:25px;
+    }
+
+    .hero p{
+
+      color:#6b4d57;
+
+      line-height:1.9;
+
+      font-size:16px;
+    }
+
+    .section{
+
+      margin-bottom:40px;
+    }
+
+    .section-title{
+
+      font-size:28px;
+
+      color:#4b2e39;
+
+      margin-bottom:25px;
+
+      position:relative;
+
+      padding-left:18px;
+    }
+
+    .section-title::before{
+
+      content:"";
+
+      position:absolute;
+
+      left:0;
+      top:0;
+
+      width:6px;
+      height:100%;
+
+      background:#c08497;
+
+      border-radius:10px;
+    }
+
+    .card{
+
+      background:#fff8f6;
+
+      padding:28px;
+
+      border-radius:22px;
+
+      margin-bottom:20px;
+
+      border:1px solid #f1d6c7;
+
+      transition:0.35s;
+    }
+
+    .card:hover{
+
+      transform:translateY(-6px);
+
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .card h3{
+
+      color:#4b2e39;
+
+      margin-bottom:10px;
+
+      font-size:22px;
+    }
+
+    .card p{
+
+      color:#6b4d57;
+
+      line-height:1.8;
+    }
+
+    .grid{
+
+      display:grid;
+
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+      gap:20px;
+    }
+
+    .skill-card{
+
+      background:#fff8f6;
+
+      padding:25px;
+
+      border-radius:20px;
+
+      border-top:5px solid #d4a373;
+
+      transition:0.35s;
+    }
+
+    .skill-card:hover{
+
+      transform:translateY(-6px);
+
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .skill-card h3{
+
+      margin-bottom:15px;
+
+      color:#4b2e39;
+    }
+
+    ul{
+
+      padding-left:20px;
+
+      color:#6b4d57;
+
+      line-height:2;
+    }
+
+    footer{
+
+      margin-top:40px;
+
+      text-align:center;
+
+      color:#9a6f7d;
+
+      font-size:14px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:950px){
+
+      .cv-container{
+
+        grid-template-columns:1fr;
+      }
+
+      .right-side{
+
+        padding:35px;
+      }
+
+      .hero h2{
+
+        font-size:40px;
+      }
+    }
+
+    @media(max-width:600px){
+
+      body{
+
+        padding:15px;
+      }
+
+      .hero h2{
+
+        font-size:30px;
+      }
+
+      .typing{
+
+        font-size:20px;
+      }
+
+      .section-title{
+
+        font-size:24px;
+      }
+    }
+	.language-box ul li{
+  color: white;
+}
+}
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="cv-container">
+
+    <!-- LEFT SIDE -->
+
+    <div class="left-side">
+
+      <div class="profile">
+
+        <div class="profile-image">
+          F
+        </div>
+
+        <h1>Fajr Fahad Alharithi</h1>
+
+        <p>Computer Science Student</p>
+
+      </div>
+
+      <!-- CONTACT -->
+
+      <div class="contact-box">
+
+        <h2 class="left-title">Contact</h2>
+
+        <div class="contact-item">
+          <span>Phone</span>
+          <p>+966504717468</p>
+        </div>
+
+        <div class="contact-item">
+          <span>Email</span>
+          <a href="mailto:fajralharthi0@gmail.com">
+            fajralharthi0@gmail.com
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <span>Location</span>
+          <p>Riyadh, Saudi Arabia</p>
+        </div>
+
+        <div class="contact-item">
+          <span>LinkedIn</span>
+
+          <a href="https://linkedin.com/in/fajr-alharthi-b96236318" target="_blank">
+            linkedin.com/in/fajr-alharthi-b96236318
+          </a>
+        </div>
+
+      </div>
+
+      <!-- LANGUAGES -->
+
+      <div class="language-box">
+
+        <h2 class="left-title">Languages</h2>
+
+        <ul>
+          <li>Arabic — Native</li>
+          <li>English — Intermediate</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="right-side">
+
+      <!-- HERO -->
+
+      <div class="hero">
+
+        <h2>Fajr Fahad Alharithi</h2>
+
+        <div class="typing">
+          
+        </div>
+
+        <p>
+       Computer Science student at Shaqra University with a strong passion for technology and programming. Skilled in Python programming, data analysis, and basic web development, with a solid understanding of algorithms and data structures. Experienced in developing academic projects. Eager to expand my knowledge in artificial intelligence, application development, and cybersecurity, while continuously improving my technical and problem-solving skills.
+
+        </p>
+
+      </div>
+
+      <!-- EDUCATION -->
+
+      <div class="section">
+
+        <h2 class="section-title">Education</h2>
+
+        <div class="card">
+
+          <h3>Bachelor of Computer Science</h3>
+
+          <p>
+            Shaqra University – Riyadh, Saudi Arabia
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- SKILLS -->
+
+      <div class="section">
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="grid">
+
+          <div class="skill-card">
+
+            <h3>Programming</h3>
+
+            <ul>
+              <li>Python</li>
+              <li>SQL</li>
+              <li>GUI Development</li>
+              <li>Multi-threading</li>
+            </ul>
+
+          </div>
+
+          <div class="skill-card">
+
+            <h3>Databases</h3>
+
+            <ul>
+              <li>MySQL</li>
+              <li>Database Design</li>
+              <li>Normalization</li>
+            </ul>
+
+          </div>
+
+          <div class="skill-card">
+
+            <h3>Web Development</h3>
+
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript Basics</li>
+            </ul>
+
+          </div>
+
+          <div class="skill-card">
+
+            <h3>Clouding </h3>
+
+            <ul>
+              <li>AWS Cloud Practitioner Essentials</li>
+
+            </ul>
+
+          </div>
+
+ <div class="skill-card">
+
+            <h3> Networking</h3>
+
+            <ul>
+             
+              <li>Cisco Networking Basics</li>
+
+            </ul>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <!-- PROJECTS -->
+
+      <div class="section">
+
+        <h2 class="section-title">Projects</h2>
+
+        <div class="grid">
+
+          <div class="skill-card">
+
+            <h3>Supermarket Management System</h3>
+
+            <p>
+              Developed using Python and MySQL for inventory management.
+            </p>
+
+          </div>
+
+          <div class="skill-card">
+
+            <h3>Online Hotel Booking System</h3>
+
+            <p>
+              Responsive booking interface designed using HTML and CSS.
+            </p>
+
+          </div>
+
+          <div class="skill-card">
+
+            <h3>Smart Home Security System</h3>
+
+            <p>
+              Conceptual smart security solution integrating monitoring systems.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- EXPERIENCE -->
+
+      <div class="section">
+
+        <h2 class="section-title">Experience & Activities</h2>
+
+        <div class="card">
+
+          <h3>Google Developer Student Club (GDSC)</h3>
+
+          <p>Member</p>
+
+        </div>
+
+      </div>
+
+      <!-- CERTIFICATIONS -->
+
+      <div class="section">
+
+        <h2 class="section-title">Certifications</h2>
+
+        <div class="card">
+
+          <ul>
+            <li>Oracle Database Foundations – Oracle Academy</li>
+            <li>AWS Cloud Practitioner Essentials – AWS</li>
+            <li>Cisco Networking Basics – Cisco Networking Academy</li>
+            <li>HTML Essentials – Cisco Networking Academy</li>
+            <li>Data Analysis Essentials – TVTC</li>
+            <li>Robotics and Programming – TVTC</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <footer>
+       CV Website Of Fajr Fahad Alharithi
+      </footer>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
